@@ -27,18 +27,18 @@ namespace AnimalAPI.Controllers
         /// <summary>
         /// Creates a new purchase
         /// </summary>
-        /// <param name="animalIdList" example="1,2,3"></param>
-        /// <example>[1,2,3]</example>
+        /// <param name="Animal Id List" example="1,2,3"></param>
         /// <returns>Created purchase</returns>
         [HttpPost]
-        public async Task<ActionResult<Purchase>> CreatePurchase(int[] animalIdList)
+        public async Task<ActionResult<Purchase>> CreatePurchase(PurchaseAnimalsParameters parameters)
         {
+            int[] animalIdList = parameters.AnimalIds;
 
             // check duplicates
             if (HasDuplicates(animalIdList)) return BadRequest("The array contains duplicated id's.");
 
             // check if animals exist
-            if(GetCount(animalIdList) != animalIdList.Count()) return BadRequest("One or more AnimalIds doesnt exist in the database.");
+            if(GetCount(animalIdList) != animalIdList.Count()) return BadRequest("One or more AnimalId's doesnt exist in the database.");
 
             // calculate list price
             float listPrice = GetListSum(animalIdList);

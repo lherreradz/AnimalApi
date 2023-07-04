@@ -4,12 +4,11 @@
         <name>AnimalAPI</name>
     </assembly>
     <members>
-        <member name="M:AnimalAPI.Controllers.PurchaseController.CreatePurchase(System.Int32[])">
+        <member name="M:AnimalAPI.Controllers.PurchaseController.CreatePurchase(AnimalAPI.Models.PurchaseAnimalsParameters)">
             <summary>
             Creates a new purchase
             </summary>
-            <param name="animalIdList" example="1,2,3"></param>
-            <example>[1,2,3]</example>
+            <param name="Animal Id ListIdList" example="1,2,3"></param>
             <returns>Created purchase</returns>
         </member>
     </members>
