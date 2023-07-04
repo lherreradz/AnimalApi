@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AnimalAPI</name>
+    </assembly>
+    <members>
+        <member name="M:AnimalAPI.Controllers.PurchaseController.CreatePurchase(System.Int32[])">
+            <summary>
+            Creates a new purchase
+            </summary>
+            <param name="animalIdList" example="1,2,3"></param>
+            <example>[1,2,3]</example>
+            <returns>Created purchase</returns>
+        </member>
+    </members>
+</doc>
